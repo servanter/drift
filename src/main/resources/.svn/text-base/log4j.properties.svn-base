@@ -1,0 +1,20 @@
+log4j.rootCategory=Info,console,drift
+log4j.logger.com.zhy=Debug
+log4j.logger.org.hibernate=ERROR
+log4j.logger.org.logicalcobwebs.proxool=ERROR
+log4j.logger.com.meetup=ERROR
+log4j.logger.org.springframework=ERROR
+log4j.logger.org.apache.commons.httpclient=ERROR
+log4j.logger.httpclient=ERROR
+log4j.logger.org.quartz=ERROR
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=%d %p [%c] - <%m>%n
+
+log4j.appender.drift=org.apache.log4j.DailyRollingFileAppender 
+log4j.appender.drift.File=${catalina.home}/logs/drift.log
+log4j.appender.console.DatePattern='.'yyyy-MM-dd
+log4j.appender.drift.layout=org.apache.log4j.PatternLayout 
+log4j.appender.drift.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss,SSS} %p [%c] - <%m>%n
+log4j.appender.drift.logfile.encoding=utf-8

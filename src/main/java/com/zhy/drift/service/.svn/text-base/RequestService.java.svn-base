@@ -1,0 +1,18 @@
+package com.zhy.drift.service;
+
+import com.zhy.drift.bean.Message;
+
+/**
+ * 信息发送业务层
+ * @author zhy
+ *
+ */
+public interface MessageSendService {
+
+    /**
+     * 发送信息
+     * @param message
+     * @return
+     */
+    public boolean sendMessage(Message message);
+}
